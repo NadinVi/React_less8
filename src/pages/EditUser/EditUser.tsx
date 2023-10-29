@@ -11,7 +11,7 @@ const EditUser = () => {
   return (
     <>
       <Typography variant="h5" gutterBottom>
-        Edit Post
+        Edit User
       </Typography>
       <Card>
         <CardContent>

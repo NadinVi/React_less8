@@ -6,7 +6,6 @@ import type { Comments } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 
 const Comments = () => {
   const comments = useLoaderData() as Comments[]
-
   //console.log(comments);
 
   return (

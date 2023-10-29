@@ -32,7 +32,7 @@ const PostDetails = () => {
       <Box mt={2} display="flex" flexDirection="row">
         <Box mr={2}>
           <Button component={Link} variant="contained" color="primary" to="edit">
-            Edit User
+            Edit Post
           </Button>
         </Box>
         <Form
