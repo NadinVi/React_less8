@@ -1,27 +1,28 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { RootLayout } from "../layouts/RootLayout/RootLayout";
-import { PageNotFound } from "../pages/PageNotFound/PageNotFound";
-import { Photos } from "../pages/Photos/Photos";
-import { Posts } from "../pages/Posts/Posts";
-import { Comments } from "../pages/Comments/Comments";
-import { Users } from "../pages/Users/Users";
-import { photosLoader } from "../pages/Photos/photosLoader";
-import { usersLoader } from "../pages/Users/usersLoader";
-import { userDetailsLoader } from "../pages/UserDetais/userDetailsLoader";
-import { UserDetails } from "../pages/UserDetais/UserDetails";
-import { destroyUserAction } from "../pages/UserDetais/destroyUserAction";
-import { EditUser } from "../pages/EditUser/EditUser";
-import { editUserAction } from "../pages/EditUser/editUserAction";
-import { commentsLoader } from "../pages/Comments/commentsLoader";
-import { commentDetailsLoader } from "../pages/CommentDetails/commentDetailsLoader";
-import { CommentDetails } from "../pages/CommentDetails/CommentDetails";
-import { destroyCommentAction } from "../pages/CommentDetails/destroyCommentAction";
-import { postsLoader } from "../pages/Posts/postsLoader";
-import { PostDetails } from "../pages/PostDetails/PostDetail";
-import { postDetailsLoader } from "../pages/PostDetails/postDetailsLoader";
-import { destroyPostAction } from "../pages/PostDetails/destroyPostAction";
-import { EditPost } from "../pages/EditPost/EditPost";
-import { editPostAction } from "../pages/EditPost/editPostAction";
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
+import { RootLayout } from '../layouts/RootLayout/RootLayout'
+import { CommentDetails } from '../pages/CommentDetails/CommentDetails'
+import { commentDetailsLoader } from '../pages/CommentDetails/commentDetailsLoader'
+import { destroyCommentAction } from '../pages/CommentDetails/destroyCommentAction'
+import { Comments } from '../pages/Comments/Comments'
+import { commentsLoader } from '../pages/Comments/commentsLoader'
+import { EditPost } from '../pages/EditPost/EditPost'
+import { editPostAction } from '../pages/EditPost/editPostAction'
+import { EditUser } from '../pages/EditUser/EditUser'
+import { editUserAction } from '../pages/EditUser/editUserAction'
+import { PageNotFound } from '../pages/PageNotFound/PageNotFound'
+import { Photos } from '../pages/Photos/Photos'
+import { photosLoader } from '../pages/Photos/photosLoader'
+import { PostDetails } from '../pages/PostDetails/PostDetail'
+import { destroyPostAction } from '../pages/PostDetails/destroyPostAction'
+import { postDetailsLoader } from '../pages/PostDetails/postDetailsLoader'
+import { Posts } from '../pages/Posts/Posts'
+import { postsLoader } from '../pages/Posts/postsLoader'
+import { UserDetails } from '../pages/UserDetais/UserDetails'
+import { destroyUserAction } from '../pages/UserDetais/destroyUserAction'
+import { userDetailsLoader } from '../pages/UserDetais/userDetailsLoader'
+import { Users } from '../pages/Users/Users'
+import { usersLoader } from '../pages/Users/usersLoader'
 
 const router = createBrowserRouter([
   {
@@ -88,10 +89,10 @@ const router = createBrowserRouter([
         loader: userDetailsLoader,
         action: editUserAction,
       },
-    ]
-  }
-]);
+    ],
+  },
+])
 
 const Router = () => <RouterProvider router={router} />
 
-export { Router };
+export { Router }

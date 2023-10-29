@@ -1,4 +1,3 @@
 export interface FooterProps {
-    title?: string
-  }
-  
+  title?: string
+}

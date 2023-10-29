@@ -4,7 +4,7 @@ import { API } from '../API/API'
 export interface FetchArg {
   signal: AbortSignal
   userId?: number
-  updates?: Record<string, unknown> 
+  updates?: Record<string, unknown>
   commentId?: string
   postId?: string
 }
@@ -62,7 +62,6 @@ export interface Posts {
   body: string
 }
 
-
 class JsonPlaceholderAPI extends API {
   // constructor(url) {
   //   super(url)
@@ -91,7 +90,7 @@ class JsonPlaceholderAPI extends API {
   }
 
   async getComments({ signal }: FetchArg) {
-    const responseComments = await this.fetch<Comments[]>({ path: 'comments', signal });
+    const responseComments = await this.fetch<Comments[]>({ path: 'comments', signal })
 
     return responseComments.slice(0, 50)
   }

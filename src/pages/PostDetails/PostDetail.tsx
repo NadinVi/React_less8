@@ -1,17 +1,19 @@
-import { Box, Button, Card, CardContent, List, ListItem, ListItemText, Typography } from "@mui/material"
-import { Form, Link, useLoaderData } from "react-router-dom"
-import type { Posts } from "../../api/JsonPlaseholderAPI/JsonPlaseholderAPI";
+import { Form, Link, useLoaderData } from 'react-router-dom'
+
+import { Box, Button, Card, CardContent, List, ListItem, ListItemText, Typography } from '@mui/material'
+
+import type { Posts } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 
 const POSTS = [
   { name: 'Title', key: 'title' },
   { name: 'Text post', key: 'body' },
-] satisfies {name: string, key: keyof Pick<Posts, 'title' | 'body'>}[]
+] satisfies { name: string; key: keyof Pick<Posts, 'title' | 'body'> }[]
 
 const PostDetails = () => {
-  const post = useLoaderData() as Posts;
+  const post = useLoaderData() as Posts
   return (
     <>
-      <Typography variant='h5' gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Post Details
       </Typography>
       {post && (
@@ -40,8 +42,7 @@ const PostDetails = () => {
             if (!confirm('Delete this post?')) {
               event.preventDefault()
             }
-          }}
-        >
+          }}>
           <Button variant="contained" color="error" type="submit">
             Delete Post
           </Button>

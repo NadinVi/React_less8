@@ -46,28 +46,29 @@
 //
 // console.log(userA, userB)
 
-interface User {
-    name: string
-    age: number
-    email?: string
-  }
-  
-  interface Admin extends User { // забралм все поля user  и добавили свое getRole()
-    getRole(): string
-  }
-  
-  const admin: Admin = {
-    name: 'Name',
-    age: 20,
-    getRole() {
-      return 'Admin'
-    },
-  }
+// interface User {
+//   name: string
+//   age: number
+//   email?: string
+// }
 
-  type Student = Pick<User, 'name' | 'email'> & { level: number } // взяли пол от User name и email. Age не взяли. Добавили свое поле level: number
-  //type Student = Omit<User, 'age'> // значит вычеркнуть age для Student
-  const student: Student = {
-    name: 'Vania',
-    level: 2,
-    //age: 23,
-  }
+// interface Admin extends User {
+//   // забралм все поля user  и добавили свое getRole()
+//   getRole(): string
+// }
+
+// const admin: Admin = {
+//   name: 'Name',
+//   age: 20,
+//   getRole() {
+//     return 'Admin'
+//   },
+// }
+
+// type Student = Pick<User, 'name' | 'email'> & { level: number } // взяли пол от User name и email. Age не взяли. Добавили свое поле level: number
+// //type Student = Omit<User, 'age'> // значит вычеркнуть age для Student
+// const student: Student = {
+//   name: 'Vania',
+//   level: 2,
+//   //age: 23,
+// }

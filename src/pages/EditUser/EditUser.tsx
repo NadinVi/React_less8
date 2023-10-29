@@ -1,16 +1,16 @@
-import { Box, Button, Card, CardContent, FormControl, InputLabel, OutlinedInput, Typography } from "@mui/material";
-import { Form, useLoaderData } from "react-router-dom"
+import { Form, useLoaderData } from 'react-router-dom'
 
-import type { User } from "../../api/JsonPlaseholderAPI/JsonPlaseholderAPI";
+import { Box, Button, Card, CardContent, FormControl, InputLabel, OutlinedInput, Typography } from '@mui/material'
 
+import type { User } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 
 const EditUser = () => {
-  const user = useLoaderData() as User;
+  const user = useLoaderData() as User
 
   //console.log('user', user)
   return (
     <>
-      <Typography variant='h5' gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Edit Post
       </Typography>
       <Card>

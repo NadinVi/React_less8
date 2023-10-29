@@ -1,7 +1,8 @@
-import { Box, Button, Card, CardContent, List, ListItem, ListItemText, Typography } from "@mui/material"
-import { Form, Link, useLoaderData } from "react-router-dom"
+import { Form, Link, useLoaderData } from 'react-router-dom'
 
-import type { User } from "../../api/JsonPlaseholderAPI/JsonPlaseholderAPI";
+import { Box, Button, Card, CardContent, List, ListItem, ListItemText, Typography } from '@mui/material'
+
+import type { User } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 
 const FIELDS = [
   { name: 'Name', key: 'name' },
@@ -9,13 +10,13 @@ const FIELDS = [
   { name: 'Email', key: 'email' },
   { name: 'Phone', key: 'phone' },
   { name: 'Website', key: 'website' },
-] satisfies { name: string, key: keyof Pick<User, 'name' | 'username' | 'email' | 'phone' | 'website'>}[]
+] satisfies { name: string; key: keyof Pick<User, 'name' | 'username' | 'email' | 'phone' | 'website'> }[]
 
 const UserDetails = () => {
-  const user = useLoaderData() as User;
+  const user = useLoaderData() as User
   return (
     <>
-      <Typography variant='h5' gutterBottom>
+      <Typography variant="h5" gutterBottom>
         User Details
       </Typography>
       {user && (
@@ -44,8 +45,7 @@ const UserDetails = () => {
             if (!confirm('Please confirm that you want to delete this user.')) {
               event.preventDefault()
             }
-          }}
-        >
+          }}>
           <Button variant="contained" color="error" type="submit">
             Delete User
           </Button>

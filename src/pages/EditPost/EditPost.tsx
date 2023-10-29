@@ -1,13 +1,15 @@
-import { Box, Button, Card, CardContent, FormControl, InputLabel, OutlinedInput, Typography } from "@mui/material";
-import { Form, useLoaderData } from "react-router-dom"
-import type { Posts } from "../../api/JsonPlaseholderAPI/JsonPlaseholderAPI";
+import { Form, useLoaderData } from 'react-router-dom'
+
+import { Box, Button, Card, CardContent, FormControl, InputLabel, OutlinedInput, Typography } from '@mui/material'
+
+import type { Posts } from '../../api/JsonPlaseholderAPI/JsonPlaseholderAPI'
 
 const EditPost = () => {
-  const post = useLoaderData() as Posts;
+  const post = useLoaderData() as Posts
 
   return (
     <>
-      <Typography variant='h5' gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Edit Post
       </Typography>
       <Card>
